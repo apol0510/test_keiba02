@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レース情報 - 競馬情報サイト</title>
+    <meta name="description" content="今後のレース日程、出走馬情報、オッズ情報を詳しくお伝えします。">
+    <meta name="keywords" content="競馬,レース情報,出走表,オッズ,競馬場">
+    
+    <link rel="icon" href="https://via.placeholder.com/32x32/d69e2e/ffffff?text=🐎">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">🐎 競馬情報</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="race-info.html" class="active">レース情報</a></li>
+                    <li><a href="prediction.html">予想・分析</a></li>
+                    <li><a href="results.html">結果・払戻</a></li>
+                    <li><a href="guide.html">初心者ガイド</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <!-- ページヘッダー -->
+        <section class="hero" style="padding: 2rem 0;">
+            <div class="container">
+                <h1>レース情報</h1>
+                <p>今後のレース日程・出走馬・オッズ情報</p>
+            </div>
+        </section>
+
+        <!-- 検索・フィルター -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">レース検索</h2>
+                <div class="card">
+                    <div class="card-content">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label">開催日</label>
+                                <input type="date" class="form-input" id="race-date" value="2024-10-27">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">競馬場</label>
+                                <select class="form-select" id="racecourse">
+                                    <option value="">全て</option>
+                                    <option value="tokyo" selected>東京</option>
+                                    <option value="kyoto">京都</option>
+                                    <option value="hanshin">阪神</option>
+                                    <option value="nakayama">中山</option>
+                                    <option value="kokura">小倉</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">グレード</label>
+                                <select class="form-select" id="grade">
+                                    <option value="">全て</option>
+                                    <option value="g1">G1</option>
+                                    <option value="g2">G2</option>
+                                    <option value="g3">G3</option>
+                                    <option value="listed">Listed</option>
+                                    <option value="open">オープン</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn-primary" id="search-button" style="margin-top: 1.5rem;">検索</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 本日の重賞レース -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">本日の重賞レース</h2>
+                <div class="card">
+                    <div class="card-content">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <h3 class="card-title text-gold">15:40 東京11R 天皇賞(秋) G1</h3>
+                            <button class="favorite-button" data-race-id="tokyo-11r" onclick="toggleFavorite('tokyo-11r')">☆</button>
+                        </div>
+                        <p><strong>コース:</strong> 芝2000m・左 | <strong>出走頭数:</strong> 18頭 | <strong>賞金:</strong> 3億円</p>
+                        
+                        <div class="table-responsive mt-2">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>枠</th>
+                                        <th>馬番</th>
+                                        <th>馬名</th>
+                                        <th>性齢</th>
+                                        <th>騎手</th>
+                                        <th>斤量</th>
+                                        <th>単勝オッズ</th>
+                                        <th>人気</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="background-color: #fff5f5;">
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><strong>エリザベスタワー</strong></td>
+                                        <td>牡4</td>
+                                        <td>横山武史</td>
+                                        <td>58.0</td>
+                                        <td class="text-gold">3.2</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>ゴールドシップ</td>
+                                        <td>牡5</td>
+                                        <td>福永祐一</td>
+                                        <td>58.0</td>
+                                        <td>5.8</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>ディープインパクト</td>
+                                        <td>牡4</td>
+                                        <td>武豊</td>
+                                        <td>58.0</td>
+                                        <td>8.1</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>4</td>
+                                        <td>オルフェーヴル</td>
+                                        <td>牡6</td>
+                                        <td>池添謙一</td>
+                                        <td>58.0</td>
+                                        <td>12.4</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>5</td>
+                                        <td>ジェンティルドンナ</td>
+                                        <td>牝5</td>
+                                        <td>戸崎圭太</td>
+                                        <td>56.0</td>
+                                        <td>15.7</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>6</td>
+                                        <td>ブエナビスタ</td>
+                                        <td>牝4</td>
+                                        <td>安田隆行</td>
+                                        <td>56.0</td>
+                                        <td>18.9</td>
+                                        <td>6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="mt-2">
+                            <h4 style="color: var(--main-color); margin-bottom: 0.5rem;">レース情報</h4>
+                            <p><strong>発走時刻:</strong> 15:40 | <strong>天候:</strong> 晴 | <strong>馬場状態:</strong> 良</p>
+                            <p><strong>コース解説:</strong> 東京競馬場の芝2000mは、直線が長く、スタミナとスピードの両方が要求されるコース。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 今日の全レース -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">本日の全レース - 東京競馬場</h2>
+                <div class="card-grid">
+                    <!-- レース1 -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">10:10 1R 2歳新馬</h3>
+                            <p><strong>芝1600m・左</strong> | 16頭立て</p>
+                            <p>賞金: 700万円</p>
+                            <div class="mt-1">
+                                <p><strong>注目馬:</strong></p>
+                                <ul style="margin-left: 1rem;">
+                                    <li>1番 サンプルホース (2.1倍)</li>
+                                    <li>3番 テストホース (4.5倍)</li>
+                                    <li>7番 ダミーホース (6.8倍)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- レース2 -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">10:45 2R 3歳上1勝クラス</h3>
+                            <p><strong>ダート1400m</strong> | 15頭立て</p>
+                            <p>賞金: 1000万円</p>
+                            <div class="mt-1">
+                                <p><strong>注目馬:</strong></p>
+                                <ul style="margin-left: 1rem;">
+                                    <li>5番 スピードスター (3.2倍)</li>
+                                    <li>8番 パワーホース (5.1倍)</li>
+                                    <li>12番 ラッキーチャンス (8.9倍)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- レース3 -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">11:20 3R 3歳上2勝クラス</h3>
+                            <p><strong>芝1800m・左</strong> | 14頭立て</p>
+                            <p>賞金: 1500万円</p>
+                            <div class="mt-1">
+                                <p><strong>注目馬:</strong></p>
+                                <ul style="margin-left: 1rem;">
+                                    <li>2番 エレガントレディ (2.8倍)</li>
+                                    <li>9番 クラシックキング (4.2倍)</li>
+                                    <li>11番 フューチャースター (7.3倍)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- レース4 -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">11:55 4R 3歳上1勝クラス</h3>
+                            <p><strong>芝1400m・左</strong> | 18頭立て</p>
+                            <p>賞金: 1000万円</p>
+                            <div class="mt-1">
+                                <p><strong>注目馬:</strong></p>
+                                <ul style="margin-left: 1rem;">
+                                    <li>4番 スプリントキング (3.5倍)</li>
+                                    <li>13番 ライトニング (5.7倍)</li>
+                                    <li>16番 クイックシルバー (9.2倍)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- レース5 -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">12:30 5R 2歳新馬</h3>
+                            <p><strong>ダート1600m</strong> | 15頭立て</p>
+                            <p>賞金: 700万円</p>
+                            <div class="mt-1">
+                                <p><strong>注目馬:</strong></p>
+                                <ul style="margin-left: 1rem;">
+                                    <li>6番 ダートマスター (2.9倍)</li>
+                                    <li>10番 ストームライダー (4.8倍)</li>
+                                    <li>14番 ワイルドスピリット (7.6倍)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- レース6 -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">13:05 6R 3歳上2勝クラス</h3>
+                            <p><strong>芝2400m・左</strong> | 13頭立て</p>
+                            <p>賞金: 1500万円</p>
+                            <div class="mt-1">
+                                <p><strong>注目馬:</strong></p>
+                                <ul style="margin-left: 1rem;">
+                                    <li>1番 ステイヤーキング (3.1倍)</li>
+                                    <li>7番 マラソンランナー (5.4倍)</li>
+                                    <li>12番 エンドレスジャーニー (8.7倍)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- オッズ情報 -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">オッズ情報</h2>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">11R 天皇賞(秋) - 各種オッズ</h3>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 1rem;">
+                            <div>
+                                <h4 style="color: var(--main-color);">単勝・複勝</h4>
+                                <div class="table-responsive">
+                                    <table class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th>馬番</th>
+                                                <th>単勝</th>
+                                                <th>複勝</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>3.2</td>
+                                                <td>1.2-1.5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>5.8</td>
+                                                <td>1.8-2.3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>8.1</td>
+                                                <td>2.4-3.1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: var(--main-color);">馬連・馬単</h4>
+                                <div class="table-responsive">
+                                    <table class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th>組合せ</th>
+                                                <th>馬連</th>
+                                                <th>馬単</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1-2</td>
+                                                <td>15.4</td>
+                                                <td>25.8</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1-3</td>
+                                                <td>22.7</td>
+                                                <td>38.9</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2-3</td>
+                                                <td>41.2</td>
+                                                <td>68.5</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-2">
+                            <p><small class="text-gold">※オッズは10分ごとに更新されます。発走直前に最終確認をお勧めします。</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 今週の注目レース -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">今週の注目レース</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200/1a365d/ffffff?text=天皇賞" alt="天皇賞" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title text-gold">天皇賞(秋) - G1</h3>
+                            <p><strong>10月27日(日) 東京11R</strong></p>
+                            <p>芝2000m | 3歳以上</p>
+                            <p>賞金総額: 3億円</p>
+                            <a href="#" class="cta-button">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200/d69e2e/ffffff?text=富士S" alt="富士ステークス" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title text-gold">富士ステークス - G3</h3>
+                            <p><strong>10月26日(土) 東京11R</strong></p>
+                            <p>芝1600m | 3歳以上</p>
+                            <p>賞金総額: 7000万円</p>
+                            <a href="#" class="cta-button">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200/2d5a87/ffffff?text=アルテミスS" alt="アルテミスステークス" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title text-gold">アルテミスS - G3</h3>
+                            <p><strong>10月27日(日) 東京10R</strong></p>
+                            <p>芝1600m | 2歳牝馬</p>
+                            <p>賞金総額: 7000万円</p>
+                            <a href="#" class="cta-button">詳細を見る</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>サイトマップ</h3>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="race-info.html">レース情報</a></li>
+                        <li><a href="prediction.html">予想・分析</a></li>
+                        <li><a href="results.html">結果・払戻</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="guide.html">初心者ガイド</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="#privacy">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>外部リンク</h3>
+                    <ul>
+                        <li><a href="https://www.jra.go.jp/" target="_blank">JRA公式サイト</a></li>
+                        <li><a href="#blog" target="_blank">公式ブログ</a></li>
+                        <li><a href="#twitter" target="_blank">Twitter</a></li>
+                        <li><a href="#facebook" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>お知らせ</h3>
+                    <p>競馬は20歳以上</p>
+                    <p>のギャンブルです。</p>
+                    <p>節度を持って</p>
+                    <p>楽しみましょう。</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 競馬情報サイト. All rights reserved.</p>
+                <p>本サイトは情報提供を目的とし、投資勧誘を意図したものではありません。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

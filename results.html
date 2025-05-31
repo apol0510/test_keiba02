@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結果・払戻 - 競馬情報サイト</title>
+    <meta name="description" content="最新のレース結果と払戻金情報をリアルタイムで更新しています。">
+    <meta name="keywords" content="競馬結果,払戻金,レース結果,馬券,配当">
+    
+    <link rel="icon" href="https://via.placeholder.com/32x32/d69e2e/ffffff?text=🐎">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">🐎 競馬情報</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="race-info.html">レース情報</a></li>
+                    <li><a href="prediction.html">予想・分析</a></li>
+                    <li><a href="results.html" class="active">結果・払戻</a></li>
+                    <li><a href="guide.html">初心者ガイド</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <!-- ページヘッダー -->
+        <section class="hero" style="padding: 2rem 0;">
+            <div class="container">
+                <h1>結果・払戻</h1>
+                <p>最新のレース結果と払戻金情報</p>
+            </div>
+        </section>
+
+        <!-- 速報・注目結果 -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">🏆 重賞レース結果</h2>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title text-gold">天皇賞(秋) G1 - 東京11R 結果</h3>
+                        <p><strong>発走時刻:</strong> 15:40 | <strong>天候:</strong> 晴 | <strong>馬場:</strong> 良 | <strong>タイム:</strong> 1:58.2</p>
+                        
+                        <div class="table-responsive mt-2">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>着順</th>
+                                        <th>枠</th>
+                                        <th>馬番</th>
+                                        <th>馬名</th>
+                                        <th>性齢</th>
+                                        <th>騎手</th>
+                                        <th>タイム</th>
+                                        <th>着差</th>
+                                        <th>人気</th>
+                                        <th>オッズ</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="background-color: #fff9c4;">
+                                        <td><strong style="color: #d69e2e;">1着</strong></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><strong>エリザベスタワー</strong></td>
+                                        <td>牡4</td>
+                                        <td>横山武史</td>
+                                        <td>1:58.2</td>
+                                        <td>-</td>
+                                        <td>1</td>
+                                        <td>3.2</td>
+                                    </tr>
+                                    <tr style="background-color: #f0f9ff;">
+                                        <td><strong style="color: #3b82f6;">2着</strong></td>
+                                        <td>3</td>
+                                        <td>5</td>
+                                        <td><strong>ジェンティルドンナ</strong></td>
+                                        <td>牝5</td>
+                                        <td>戸崎圭太</td>
+                                        <td>1:58.5</td>
+                                        <td>2馬身</td>
+                                        <td>5</td>
+                                        <td>15.7</td>
+                                    </tr>
+                                    <tr style="background-color: #f0fdf4;">
+                                        <td><strong style="color: #22c55e;">3着</strong></td>
+                                        <td>4</td>
+                                        <td>7</td>
+                                        <td><strong>ミラクルチャンス</strong></td>
+                                        <td>牡5</td>
+                                        <td>川田将雅</td>
+                                        <td>1:58.8</td>
+                                        <td>1馬身半</td>
+                                        <td>8</td>
+                                        <td>28.4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4着</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>ゴールドシップ</td>
+                                        <td>牡5</td>
+                                        <td>福永祐一</td>
+                                        <td>1:59.1</td>
+                                        <td>ハナ</td>
+                                        <td>2</td>
+                                        <td>5.8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5着</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>ディープインパクト</td>
+                                        <td>牡4</td>
+                                        <td>武豊</td>
+                                        <td>1:59.3</td>
+                                        <td>1馬身</td>
+                                        <td>3</td>
+                                        <td>8.1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- 払戻金 -->
+                        <div class="mt-2">
+                            <h4 style="color: var(--main-color); margin-bottom: 1rem;">払戻金</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                                <div>
+                                    <div class="table-responsive">
+                                        <table class="data-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>単勝・複勝</th>
+                                                    <th>配当</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>単勝 1番</td>
+                                                    <td>320円</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>複勝 1番</td>
+                                                    <td>130円</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>複勝 5番</td>
+                                                    <td>420円</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>複勝 7番</td>
+                                                    <td>680円</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="table-responsive">
+                                        <table class="data-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>馬連・馬単</th>
+                                                    <th>配当</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>馬連 1-5</td>
+                                                    <td>2,540円</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>馬単 1→5</td>
+                                                    <td>4,380円</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ワイド 1-5</td>
+                                                    <td>710円</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ワイド 1-7</td>
+                                                    <td>1,240円</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ワイド 5-7</td>
+                                                    <td>3,890円</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="table-responsive">
+                                        <table class="data-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>3連複・3連単</th>
+                                                    <th>配当</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>3連複 1-5-7</td>
+                                                    <td>12,450円</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3連単 1→5→7</td>
+                                                    <td>58,970円</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-2" style="background-color: var(--light-gray); padding: 1rem; border-radius: 5px;">
+                            <h4 style="color: var(--main-color);">🎯 当サイト予想結果</h4>
+                            <p><strong style="color: var(--accent-color);">的中！</strong> 本命予想: 1番単勝 ✅</p>
+                            <p><strong style="color: var(--accent-color);">的中！</strong> 穴馬券: 1-5-7 三連複 ✅</p>
+                            <p><strong>投資額:</strong> 2,000円 → <strong>的中額:</strong> 14,450円 (<span class="text-gold">+12,450円</span>)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 本日の全結果 -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">本日の全結果 - 東京競馬場</h2>
+                <div class="card-grid">
+                    <!-- 1R結果 -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">10:10 1R 2歳新馬</h3>
+                            <p><strong>芝1600m・左</strong> | 16頭立て</p>
+                            <div class="table-responsive mt-1">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>着順</th>
+                                            <th>馬名</th>
+                                            <th>騎手</th>
+                                            <th>タイム</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1着</td>
+                                            <td>サンプルホース</td>
+                                            <td>横山武史</td>
+                                            <td>1:36.2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2着</td>
+                                            <td>テストホース</td>
+                                            <td>川田将雅</td>
+                                            <td>1:36.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3着</td>
+                                            <td>ダミーホース</td>
+                                            <td>福永祐一</td>
+                                            <td>1:36.8</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="mt-1"><strong>単勝:</strong> 210円 | <strong>馬連:</strong> 1,540円</p>
+                        </div>
+                    </div>
+
+                    <!-- 2R結果 -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">10:45 2R 3歳上1勝クラス</h3>
+                            <p><strong>ダート1400m</strong> | 15頭立て</p>
+                            <div class="table-responsive mt-1">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>着順</th>
+                                            <th>馬名</th>
+                                            <th>騎手</th>
+                                            <th>タイム</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1着</td>
+                                            <td>スピードスター</td>
+                                            <td>戸崎圭太</td>
+                                            <td>1:24.8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2着</td>
+                                            <td>パワーホース</td>
+                                            <td>武豊</td>
+                                            <td>1:25.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3着</td>
+                                            <td>ラッキーチャンス</td>
+                                            <td>池添謙一</td>
+                                            <td>1:25.3</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="mt-1"><strong>単勝:</strong> 320円 | <strong>馬連:</strong> 2,180円</p>
+                        </div>
+                    </div>
+
+                    <!-- 3R結果 -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">11:20 3R 3歳上2勝クラス</h3>
+                            <p><strong>芝1800m・左</strong> | 14頭立て</p>
+                            <div class="table-responsive mt-1">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>着順</th>
+                                            <th>馬名</th>
+                                            <th>騎手</th>
+                                            <th>タイム</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1着</td>
+                                            <td>エレガントレディ</td>
+                                            <td>川田将雅</td>
+                                            <td>1:47.9</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2着</td>
+                                            <td>クラシックキング</td>
+                                            <td>福永祐一</td>
+                                            <td>1:48.2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3着</td>
+                                            <td>フューチャースター</td>
+                                            <td>横山武史</td>
+                                            <td>1:48.4</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="mt-1"><strong>単勝:</strong> 280円| <strong>馬連:</strong> 3,420円</p>
+                        </div>
+                    </div>
+
+                    <!-- 10R結果 -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title text-gold">14:25 10R アルテミスS G3</h3>
+                            <p><strong>芝1600m・左・2歳牝馬</strong> | 15頭立て</p>
+                            <div class="table-responsive mt-1">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>着順</th>
+                                            <th>馬名</th>
+                                            <th>騎手</th>
+                                            <th>タイム</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1着</td>
+                                            <td>プリンセスローズ</td>
+                                            <td>川田将雅</td>
+                                            <td>1:35.4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2着</td>
+                                            <td>エレガントスター</td>
+                                            <td>横山武史</td>
+                                            <td>1:35.6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3着</td>
+                                            <td>フューチャークイーン</td>
+                                            <td>戸崎圭太</td>
+                                            <td>1:35.8</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="mt-1"><strong>単勝:</strong> 890円 | <strong>馬連:</strong> 4,560円 | <strong>3連複:</strong> 18,940円</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 週間ハイライト -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">今週のハイライト結果</h2>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">🏆 高配当的中レース</h3>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>日付</th>
+                                        <th>競馬場</th>
+                                        <th>レース名</th>
+                                        <th>券種</th>
+                                        <th>組合せ</th>
+                                        <th>配当</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="background-color: #fff9c4;">
+                                        <td>10/27</td>
+                                        <td>東京</td>
+                                        <td>天皇賞(秋)</td>
+                                        <td>3連単</td>
+                                        <td>1→5→7</td>
+                                        <td class="text-gold"><strong>58,970円</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10/26</td>
+                                        <td>京都</td>
+                                        <td>カシオペアS</td>
+                                        <td>3連複</td>
+                                        <td>4-9-13</td>
+                                        <td class="text-gold"><strong>42,850円</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10/26</td>
+                                        <td>東京</td>
+                                        <td>富士S</td>
+                                        <td>馬単</td>
+                                        <td>12→3</td>
+                                        <td class="text-gold"><strong>18,420円</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10/25</td>
+                                        <td>新潟</td>
+                                        <td>信越S</td>
+                                        <td>3連複</td>
+                                        <td>2-8-11</td>
+                                        <td class="text-gold"><strong>15,680円</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 検索機能 -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">結果検索</h2>
+                <div class="card">
+                    <div class="card-content">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label">開催日</label>
+                                <input type="date" class="form-input" id="result-date" value="2024-10-27">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">競馬場</label>
+                                <select class="form-select" id="result-racecourse">
+                                    <option value="">全て</option>
+                                    <option value="tokyo" selected>東京</option>
+                                    <option value="kyoto">京都</option>
+                                    <option value="hanshin">阪神</option>
+                                    <option value="nakayama">中山</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">レース番号</label>
+                                <select class="form-select" id="result-race">
+                                    <option value="">全て</option>
+                                    <option value="11">11R (メインレース)</option>
+                                    <option value="10">10R</option>
+                                    <option value="9">9R</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn-primary" style="margin-top: 1.5rem;">検索</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 統計情報 -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">今週の統計</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">人気別成績</h3>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>人気</th>
+                                            <th>勝率</th>
+                                            <th>連対率</th>
+                                            <th>複勝率</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1番人気</td>
+                                            <td>35%</td>
+                                            <td>62%</td>
+                                            <td>78%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2番人気</td>
+                                            <td>18%</td>
+                                            <td>45%</td>
+                                            <td>65%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3番人気</td>
+                                            <td>12%</td>
+                                            <td>32%</td>
+                                            <td>52%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4-6番人気</td>
+                                            <td>8%</td>
+                                            <td>25%</td>
+                                            <td>42%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">騎手別成績</h3>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>騎手</th>
+                                            <th>1着</th>
+                                            <th>2着</th>
+                                            <th>3着</th>
+                                            <th>勝率</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>川田将雅</td>
+                                            <td>8</td>
+                                            <td>6</td>
+                                            <td>4</td>
+                                            <td>22%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>横山武史</td>
+                                            <td>7</td>
+                                            <td>5</td>
+                                            <td>3</td>
+                                            <td>21%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>福永祐一</td>
+                                            <td>5</td>
+                                            <td>7</td>
+                                            <td>6</td>
+                                            <td>15%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>戸崎圭太</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>8</td>
+                                            <td>13%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">配当分析</h3>
+                            <div style="margin-bottom: 1rem;">
+                                <p><strong>今週の平均配当</strong></p>
+                                <ul style="margin-left: 1rem; line-height: 1.6;">
+                                    <li>単勝: 524円</li>
+                                    <li>馬連: 3,256円</li>
+                                    <li>3連複: 12,840円</li>
+                                    <li>3連単: 45,680円</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p><strong>万馬券的中率</strong></p>
+                                <ul style="margin-left: 1rem; line-height: 1.6;">
+                                    <li>3連複: 15%</li>
+                                    <li>3連単: 8%</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>サイトマップ</h3>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="race-info.html">レース情報</a></li>
+                        <li><a href="prediction.html">予想・分析</a></li>
+                        <li><a href="results.html">結果・払戻</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="guide.html">初心者ガイド</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="#privacy">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>外部リンク</h3>
+                    <ul>
+                        <li><a href="https://www.jra.go.jp/" target="_blank">JRA公式サイト</a></li>
+                        <li><a href="#blog" target="_blank">公式ブログ</a></li>
+                        <li><a href="#twitter" target="_blank">Twitter</a></li>
+                        <li><a href="#facebook" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>お知らせ</h3>
+                    <p>競馬は20歳以上</p>
+                    <p>のギャンブルです。</p>
+                    <p>節度を持って</p>
+                    <p>楽しみましょう。</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 競馬情報サイト. All rights reserved.</p>
+                <p>本サイトは情報提供を目的とし、投資勧誘を意図したものではありません。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

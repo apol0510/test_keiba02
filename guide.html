@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初心者ガイド - 競馬情報サイト</title>
+    <meta name="description" content="競馬のルールや用語、馬券の買い方など基本的な知識を分かりやすく解説します。">
+    <meta name="keywords" content="競馬,初心者,ガイド,馬券,ルール,用語">
+    
+    <link rel="icon" href="https://via.placeholder.com/32x32/d69e2e/ffffff?text=🐎">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">🐎 競馬情報</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="race-info.html">レース情報</a></li>
+                    <li><a href="prediction.html">予想・分析</a></li>
+                    <li><a href="results.html">結果・払戻</a></li>
+                    <li><a href="guide.html" class="active">初心者ガイド</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <!-- ページヘッダー -->
+        <section class="hero" style="padding: 2rem 0;">
+            <div class="container">
+                <h1>初心者ガイド</h1>
+                <p>競馬の基本から馬券の買い方まで分かりやすく解説</p>
+            </div>
+        </section>
+
+        <!-- 目次 -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">ガイド目次</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">📚 競馬の基礎知識</h3>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li><a href="#basics">競馬とは</a></li>
+                                <li><a href="#rules">基本ルール</a></li>
+                                <li><a href="#terms">用語集</a></li>
+                                <li><a href="#grades">レースのグレード</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">🎫 馬券について</h3>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li><a href="#tickets">馬券の種類</a></li>
+                                <li><a href="#buying">購入方法</a></li>
+                                <li><a href="#odds">オッズの見方</a></li>
+                                <li><a href="#strategy">基本戦略</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">🏟️ 競馬場ガイド</h3>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li><a href="#racecourse">競馬場の特徴</a></li>
+                                <li><a href="#access">アクセス方法</a></li>
+                                <li><a href="#facilities">施設案内</a></li>
+                                <li><a href="#tips">観戦のポイント</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 競馬の基礎知識 -->
+        <section class="section" id="basics">
+            <div class="container">
+                <h2 class="section-title">📚 競馬の基礎知識</h2>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">競馬とは</h3>
+                        <p>競馬は、騎手が馬に騎乗してコースを走り、着順を競うスポーツです。日本では主にJRA（日本中央競馬会）が運営する中央競馬と、地方自治体が運営する地方競馬があります。</p>
+                        
+                        <div class="mt-2">
+                            <h4 style="color: var(--main-color); margin-bottom: 1rem;">中央競馬の特徴</h4>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li>土日祝日を中心に開催</li>
+                                <li>賞金が高く、レベルの高いレースが多い</li>
+                                <li>全国10箇所の競馬場で開催</li>
+                                <li>G1、G2、G3などの重賞レースがある</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-2">
+                            <h4 style="color: var(--main-color); margin-bottom: 1rem;">地方競馬の特徴</h4>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li>平日も含めて頻繁に開催</li>
+                                <li>ナイター競馬が多い</li>
+                                <li>各地域の特色あるレースがある</li>
+                                <li>初心者でも気軽に楽しめる</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mt-2" id="rules">
+                    <div class="card-content">
+                        <h3 class="card-title">基本ルール</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                            <div>
+                                <h4 style="color: var(--accent-color);">レースの流れ</h4>
+                                <ol style="margin-left: 1rem; line-height: 1.8;">
+                                    <li>出走馬の確定</li>
+                                    <li>パドック（下見）</li>
+                                    <li>馬券販売開始</li>
+                                    <li>返し馬（ウォーミングアップ）</li>
+                                    <li>馬券販売締切</li>
+                                    <li>発走</li>
+                                    <li>着順確定</li>
+                                    <li>払戻し</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: var(--accent-color);">距離とコース</h4>
+                                <ul style="margin-left: 1rem; line-height: 1.8;">
+                                    <li><strong>短距離:</strong> 1000m-1400m</li>
+                                    <li><strong>マイル:</strong> 1500m-1700m</li>
+                                    <li><strong>中距離:</strong> 1800m-2200m</li>
+                                    <li><strong>長距離:</strong> 2300m以上</li>
+                                    <li><strong>芝コース:</strong> 緑の天然芝</li>
+                                    <li><strong>ダートコース:</strong> 砂のコース</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mt-2" id="terms">
+                    <div class="card-content">
+                        <h3 class="card-title">よく使われる用語</h3>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>用語</th>
+                                        <th>意味</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>本命</td>
+                                        <td>最も勝つ可能性が高いと予想される馬</td>
+                                    </tr>
+                                    <tr>
+                                        <td>対抗</td>
+                                        <td>本命に次いで勝つ可能性がある馬</td>
+                                    </tr>
+                                    <tr>
+                                        <td>単穴（たんあな）</td>
+                                        <td>3着以内に入る可能性がある穴馬</td>
+                                    </tr>
+                                    <tr>
+                                        <td>大穴</td>
+                                        <td>人気薄だが高配当が期待できる馬</td>
+                                    </tr>
+                                    <tr>
+                                        <td>鉄板</td>
+                                        <td>ほぼ確実に好走すると予想される馬</td>
+                                    </tr>
+                                    <tr>
+                                        <td>逃げ</td>
+                                        <td>スタートから先頭に立って逃げる戦法</td>
+                                    </tr>
+                                    <tr>
+                                        <td>先行</td>
+                                        <td>前の方につけて走る戦法</td>
+                                    </tr>
+                                    <tr>
+                                        <td>差し</td>
+                                        <td>後方から直線で一気に伸びる戦法</td>
+                                    </tr>
+                                    <tr>
+                                        <td>追込</td>
+                                        <td>最後方から最後の直線で一気に追い込む戦法</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 馬券について -->
+        <section class="section bg-light" id="tickets">
+            <div class="container">
+                <h2 class="section-title">🎫 馬券について</h2>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">馬券の種類と特徴</h3>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>券種</th>
+                                        <th>的中条件</th>
+                                        <th>的中率</th>
+                                        <th>配当</th>
+                                        <th>初心者おすすめ度</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>単勝</strong></td>
+                                        <td>1着馬を当てる</td>
+                                        <td>高</td>
+                                        <td>低～中</td>
+                                        <td>★★★★★</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>複勝</strong></td>
+                                        <td>3着以内を当てる</td>
+                                        <td>最高</td>
+                                        <td>低</td>
+                                        <td>★★★★★</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>馬連</strong></td>
+                                        <td>1・2着馬を当てる（順序不問）</td>
+                                        <td>中</td>
+                                        <td>中</td>
+                                        <td>★★★★☆</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>馬単</strong></td>
+                                        <td>1・2着馬を順序通り当てる</td>
+                                        <td>中</td>
+                                        <td>中～高</td>
+                                        <td>★★★☆☆</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>ワイド</strong></td>
+                                        <td>3着以内の2頭を当てる（順序不問）</td>
+                                        <td>高</td>
+                                        <td>低～中</td>
+                                        <td>★★★★☆</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>3連複</strong></td>
+                                        <td>1・2・3着馬を当てる（順序不問）</td>
+                                        <td>低</td>
+                                        <td>中～高</td>
+                                        <td>★★☆☆☆</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>3連単</strong></td>
+                                        <td>1・2・3着馬を順序通り当てる</td>
+                                        <td>最低</td>
+                                        <td>高</td>
+                                        <td>★☆☆☆☆</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="mt-2" style="background-color: #e6f3ff; padding: 1rem; border-radius: 5px;">
+                            <h4 style="color: var(--main-color);">💡 初心者におすすめの券種</h4>
+                            <p><strong>1. 単勝・複勝:</strong> 当てやすく、競馬の基本を学べます</p>
+                            <p><strong>2. ワイド:</strong> 的中率が高く、少額でも楽しめます</p>
+                            <p><strong>3. 馬連:</strong> 慣れてきたら挑戦してみましょう</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mt-2" id="buying">
+                    <div class="card-content">
+                        <h3 class="card-title">馬券の購入方法</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                            <div>
+                                <h4 style="color: var(--accent-color);">競馬場・ウインズで購入</h4>
+                                <ol style="margin-left: 1rem; line-height: 1.8;">
+                                    <li>入場券を購入（100円～200円）</li>
+                                    <li>マークシートに記入</li>
+                                    <li>券売機で購入</li>
+                                    <li>レース終了後に払戻窓口へ</li>
+                                </ol>
+                                <p class="mt-1"><strong>メリット:</strong> 現地の雰囲気を楽しめる</p>
+                                <p><strong>デメリット:</strong> 交通費がかかる</p>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: var(--accent-color);">インターネット投票</h4>
+                                <ol style="margin-left: 1rem; line-height: 1.8;">
+                                    <li>JRA公式サイトで会員登録</li>
+                                    <li>銀行口座を登録</li>
+                                    <li>入金</li>
+                                    <li>オンラインで馬券購入</li>
+                                </ol>
+                                <p class="mt-1"><strong>メリット:</strong> 家から手軽に購入できる</p>
+                                <p><strong>デメリット:</strong> 現地の雰囲気は味わえない</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mt-2" id="odds">
+                    <div class="card-content">
+                        <h3 class="card-title">オッズの見方</h3>
+                        <p>オッズとは、馬券の倍率のことです。100円購入して的中した場合の払戻金を表します。</p>
+                        
+                        <div style="background-color: var(--light-gray); padding: 1rem; border-radius: 5px; margin: 1rem 0;">
+                            <h4 style="color: var(--main-color);">計算例</h4>
+                            <p><strong>オッズ3.5倍の馬の単勝馬券を1000円購入</strong></p>
+                            <p>的中時の払戻金 = 1000円 × 3.5 = 3,500円</p>
+                            <p>利益 = 3,500円 - 1000円 = 2,500円</p>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--main-color);">オッズと人気の関係</h4>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li><strong>1.0～3.0倍:</strong> 1～3番人気（本命馬）</li>
+                                <li><strong>3.0～10.0倍:</strong> 4～8番人気（人気馬）</li>
+                                <li><strong>10.0～30.0倍:</strong> 9番人気以下（穴馬）</li>
+                                <li><strong>30.0倍以上:</strong> 大穴馬</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 競馬場ガイド -->
+        <section class="section" id="racecourse">
+            <div class="container">
+                <h2 class="section-title">🏟️ 競馬場ガイド</h2>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200/1a365d/ffffff?text=東京競馬場" alt="東京競馬場" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">東京競馬場</h3>
+                            <p><strong>所在地:</strong> 東京都府中市</p>
+                            <p><strong>アクセス:</strong> JR府中本町駅から徒歩</p>
+                            <p><strong>特徴:</strong> 日本最大の競馬場。長い直線が特徴的で、スピード競馬が繰り広げられる。</p>
+                            <p><strong>主要レース:</strong> 日本ダービー、天皇賞(秋)、ジャパンカップ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200/d69e2e/ffffff?text=中山競馬場" alt="中山競馬場" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">中山競馬場</h3>
+                            <p><strong>所在地:</strong> 千葉県船橋市</p>
+                            <p><strong>アクセス:</strong> JR船橋法典駅から徒歩</p>
+                            <p><strong>特徴:</strong> 急坂がある難コース。持久力が重要で、実力馬が勝ちやすい。</p>
+                            <p><strong>主要レース:</strong> 有馬記念、皐月賞、スプリンターズS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200/2d5a87/ffffff?text=京都競馬場" alt="京都競馬場" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">京都競馬場</h3>
+                            <p><strong>所在地:</strong> 京都市伏見区</p>
+                            <p><strong>アクセス:</strong> 京阪淀駅から徒歩</p>
+                            <p><strong>特徴:</strong> 洋芝のコースで、欧州馬が好走しやすい。起伏のある技巧的なコース。</p>
+                            <p><strong>主要レース:</strong> 菊花賞、秋華賞、マイルチャンピオンシップ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200/4a5568/ffffff?text=阪神競馬場" alt="阪神競馬場" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">阪神競馬場</h3>
+                            <p><strong>所在地:</strong> 兵庫県宝塚市</p>
+                            <p><strong>アクセス:</strong> 阪神競馬場線競馬場前駅</p>
+                            <p><strong>特徴:</strong> 急カーブが特徴的で、器用さが求められる。内枠有利の傾向。</p>
+                            <p><strong>主要レース:</strong> 桜花賞、宝塚記念、阪神ジュベナイルF</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mt-2" id="facilities">
+                    <div class="card-content">
+                        <h3 class="card-title">競馬場の施設</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                            <div>
+                                <h4 style="color: var(--accent-color);">観戦エリア</h4>
+                                <ul style="margin-left: 1rem; line-height: 1.8;">
+                                    <li><strong>スタンド:</strong> 屋根付きの観戦席</li>
+                                    <li><strong>芝生席:</strong> 開放的な芝生エリア</li>
+                                    <li><strong>指定席:</strong> 有料の指定席</li>
+                                    <li><strong>特別観覧席:</strong> 高級感ある観戦席</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: var(--accent-color);">購入・換金</h4>
+                                <ul style="margin-left: 1rem; line-height: 1.8;">
+                                    <li><strong>券売機:</strong> 馬券購入機</li>
+                                    <li><strong>払戻窓口:</strong> 的中馬券の換金</li>
+                                    <li><strong>案内所:</strong> 初心者サポート</li>
+                                    <li><strong>ATM:</strong> 現金引き出し</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: var(--accent-color);">飲食・その他</h4>
+                                <ul style="margin-left: 1rem; line-height: 1.8;">
+                                    <li><strong>レストラン:</strong> 食事処</li>
+                                    <li><strong>売店:</strong> 軽食・グッズ販売</li>
+                                    <li><strong>キッズルーム:</strong> 子供向け施設</li>
+                                    <li><strong>パドック:</strong> 出走馬を間近で見学</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 基本戦略 -->
+        <section class="section bg-light" id="strategy">
+            <div class="container">
+                <h2 class="section-title">💡 初心者向け基本戦略</h2>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">資金管理</h3>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li><strong>予算を決める:</strong> 1日の上限額を決めて守る</li>
+                                <li><strong>小額から:</strong> 100円～500円から始める</li>
+                                <li><strong>熱くならない:</strong> 負けを取り返そうとしない</li>
+                                <li><strong>勝ち逃げ:</strong> 利益が出たら一旦終了も大切</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">馬の選び方</h3>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li><strong>人気馬中心:</strong> 最初は1～3番人気から</li>
+                                <li><strong>前走成績:</strong> 前走で好走した馬を重視</li>
+                                <li><strong>騎手:</strong> 有名騎手の馬は安定感あり</li>
+                                <li><strong>コース適性:</strong> そのコースでの実績を確認</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">情報収集</h3>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li><strong>新聞・雑誌:</strong> 専門紙で情報収集</li>
+                                <li><strong>パドック:</strong> 馬の状態を実際に確認</li>
+                                <li><strong>オッズ:</strong> 人気動向をチェック</li>
+                                <li><strong>天候・馬場:</strong> 当日のコンディション確認</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mt-2">
+                    <div class="card-content">
+                        <h3 class="card-title">🎯 おすすめの楽しみ方</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                            <div>
+                                <h4 style="color: var(--accent-color);">ステップ1: 観戦から始める</h4>
+                                <ul style="margin-left: 1rem; line-height: 1.8;">
+                                    <li>馬券を買わずにレース観戦</li>
+                                    <li>競馬場の雰囲気を楽しむ</li>
+                                    <li>馬の走りを見て目を養う</li>
+                                    <li>ルールや用語に慣れる</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: var(--accent-color);">ステップ2: 少額から挑戦</h4>
+                                <ul style="margin-left: 1rem; line-height: 1.8;">
+                                    <li>100円～500円の少額投資</li>
+                                    <li>単勝・複勝から始める</li>
+                                    <li>人気馬を中心に選ぶ</li>
+                                    <li>的中の喜びを体験する</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: var(--accent-color);">ステップ3: 予想力向上</h4>
+                                <ul style="margin-left: 1rem; line-height: 1.8;">
+                                    <li>データや情報を活用</li>
+                                    <li>様々な券種に挑戦</li>
+                                    <li>自分なりの予想方法を確立</li>
+                                    <li>長期的な収支を意識</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- よくある質問 -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">❓ よくある質問</h2>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <div style="display: grid; gap: 2rem;">
+                            <div>
+                                <h4 style="color: var(--main-color);">Q. 競馬場に行くのに服装の決まりはありますか？</h4>
+                                <p>特に決まりはありません。カジュアルな服装で大丈夫です。ただし、特別観覧席などでは多少フォーマルな服装が推奨される場合があります。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: var(--main-color);">Q. 競馬は何歳から楽しめますか？</h4>
+                                <p>観戦は年齢制限がありませんが、馬券の購入は20歳からです。未成年の方も家族と一緒に競馬場で観戦を楽しむことができます。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: var(--main-color);">Q. 1日にどのくらいの予算が必要ですか？</h4>
+                                <p>入場料（100～200円）と交通費は必須です。馬券代は個人の判断ですが、初心者の方は3,000～5,000円程度から始められることをおすすめします。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: var(--main-color);">Q. 的中した馬券はいつまで換金できますか？</h4>
+                                <p>的中馬券の払戻期間は60日間です。期限を過ぎると無効になってしまうので、早めに換金しましょう。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: var(--main-color);">Q. 雨の日でも競馬はありますか？</h4>
+                                <p>基本的に雨でも開催されます。ただし、台風などの悪天候時は中止になる場合があります。馬場状態も「重」「不良」に変わり、レース展開に影響します。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>サイトマップ</h3>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="race-info.html">レース情報</a></li>
+                        <li><a href="prediction.html">予想・分析</a></li>
+                        <li><a href="results.html">結果・払戻</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="guide.html">初心者ガイド</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="#privacy">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>外部リンク</h3>
+                    <ul>
+                        <li><a href="https://www.jra.go.jp/" target="_blank">JRA公式サイト</a></li>
+                        <li><a href="#blog" target="_blank">公式ブログ</a></li>
+                        <li><a href="#twitter" target="_blank">Twitter</a></li>
+                        <li><a href="#facebook" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>お知らせ</h3>
+                    <p>競馬は20歳以上</p>
+                    <p>のギャンブルです。</p>
+                    <p>節度を持って</p>
+                    <p>楽しみましょう。</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 競馬情報サイト. All rights reserved.</p>
+                <p>本サイトは情報提供を目的とし、投資勧誘を意図したものではありません。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

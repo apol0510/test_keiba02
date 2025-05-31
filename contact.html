@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - 競馬情報サイト</title>
+    <meta name="description" content="競馬情報サイトへのお問い合わせはこちらから。ご質問・ご意見・ご要望をお聞かせください。">
+    <meta name="keywords" content="競馬,お問い合わせ,サポート,ヘルプ">
+    
+    <link rel="icon" href="https://via.placeholder.com/32x32/d69e2e/ffffff?text=🐎">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">🐎 競馬情報</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="race-info.html">レース情報</a></li>
+                    <li><a href="prediction.html">予想・分析</a></li>
+                    <li><a href="results.html">結果・払戻</a></li>
+                    <li><a href="guide.html">初心者ガイド</a></li>
+                    <li><a href="contact.html" class="active">お問い合わせ</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <!-- ページヘッダー -->
+        <section class="hero" style="padding: 2rem 0;">
+            <div class="container">
+                <h1>お問い合わせ</h1>
+                <p>ご質問・ご意見・ご要望をお聞かせください</p>
+            </div>
+        </section>
+
+        <!-- お問い合わせフォーム -->
+        <section class="section">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;">
+                    <!-- フォーム -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h2 class="card-title">お問い合わせフォーム</h2>
+                            <form id="contact-form" action="#" method="post">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">お名前 <span style="color: #e53e3e;">*</span></label>
+                                    <input type="text" id="name" name="name" class="form-input" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" class="form-label">メールアドレス <span style="color: #e53e3e;">*</span></label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">電話番号</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="category" class="form-label">お問い合わせ種別 <span style="color: #e53e3e;">*</span></label>
+                                    <select id="category" name="category" class="form-select" required>
+                                        <option value="">選択してください</option>
+                                        <option value="general">一般的なお問い合わせ</option>
+                                        <option value="prediction">予想に関するお問い合わせ</option>
+                                        <option value="technical">技術的な問題</option>
+                                        <option value="premium">プレミアムサービスについて</option>
+                                        <option value="suggestion">改善提案・要望</option>
+                                        <option value="other">その他</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">件名 <span style="color: #e53e3e;">*</span></label>
+                                    <input type="text" id="subject" name="subject" class="form-input" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message" class="form-label">お問い合わせ内容 <span style="color: #e53e3e;">*</span></label>
+                                    <textarea id="message" name="message" class="form-textarea" rows="8" required 
+                                              placeholder="お問い合わせ内容を詳しくご記入ください。"></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <input type="checkbox" id="privacy" name="privacy" required>
+                                        <span>プライバシーポリシーに同意します <span style="color: #e53e3e;">*</span></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <input type="checkbox" id="newsletter" name="newsletter">
+                                        <span>メールマガジンの配信を希望します</span>
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem;">
+                                    送信する
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- サイドバー -->
+                    <div>
+                        <!-- 連絡先情報 -->
+                        <div class="card">
+                            <div class="card-content">
+                                <h3 class="card-title">📞 お急ぎの方はこちら</h3>
+                                <div style="line-height: 2;">
+                                    <p><strong>電話受付時間</strong></p>
+                                    <p>平日 10:00～18:00</p>
+                                    <p>土日祝 10:00～17:00</p>
+                                    
+                                    <p class="mt-2"><strong>メール対応</strong></p>
+                                    <p>24時間受付</p>
+                                    <p>営業日内に返信いたします</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- よくある質問 -->
+                        <div class="card mt-2">
+                            <div class="card-content">
+                                <h3 class="card-title">❓ よくある質問</h3>
+                                <div>
+                                    <details style="margin-bottom: 1rem;">
+                                        <summary style="cursor: pointer; color: var(--main-color); font-weight: 600;">
+                                            プレミアム予想の料金は？
+                                        </summary>
+                                        <p style="margin-top: 0.5rem; padding-left: 1rem;">
+                                            月額2,980円でご利用いただけます。初回7日間は無料でお試しいただけます。
+                                        </p>
+                                    </details>
+                                    
+                                    <details style="margin-bottom: 1rem;">
+                                        <summary style="cursor: pointer; color: var(--main-color); font-weight: 600;">
+                                            予想の的中率はどのくらい？
+                                        </summary>
+                                        <p style="margin-top: 0.5rem; padding-left: 1rem;">
+                                            直近3ヶ月の平均的中率は78%です。ただし、競馬は不確定要素が多いスポーツのため、100%の的中を保証するものではありません。
+                                        </p>
+                                    </details>
+                                    
+                                    <details style="margin-bottom: 1rem;">
+                                        <summary style="cursor: pointer; color: var(--main-color); font-weight: 600;">
+                                            退会方法は？
+                                        </summary>
+                                        <p style="margin-top: 0.5rem; padding-left: 1rem;">
+                                            マイページから簡単に退会手続きが可能です。お問い合わせいただければサポートいたします。
+                                        </p>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary style="cursor: pointer; color: var(--main-color); font-weight: 600;">
+                                            データの更新頻度は？
+                                        </summary>
+                                        <p style="margin-top: 0.5rem; padding-left: 1rem;">
+                                            レース情報は開催日の朝に更新、結果・払戻は各レース終了後即座に更新しています。
+                                        </p>
+                                    </details>
+                                </div>
+                                
+                                <div class="mt-2">
+                                    <a href="guide.html" class="cta-button" style="font-size: 0.9rem;">
+                                        初心者ガイドを見る
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- サポート情報 -->
+                        <div class="card mt-2">
+                            <div class="card-content">
+                                <h3 class="card-title">🛠️ 技術サポート</h3>
+                                <p>サイトが正しく表示されない場合は、以下をお試しください：</p>
+                                <ul style="margin-left: 1rem; line-height: 1.8; margin-top: 1rem;">
+                                    <li>ブラウザの更新（F5）</li>
+                                    <li>キャッシュの削除</li>
+                                    <li>別のブラウザで確認</li>
+                                    <li>インターネット接続の確認</li>
+                                </ul>
+                                
+                                <div class="mt-2">
+                                    <p><strong>推奨ブラウザ</strong></p>
+                                    <ul style="margin-left: 1rem; line-height: 1.6;">
+                                        <li>Chrome（最新版）</li>
+                                        <li>Firefox（最新版）</li>
+                                        <li>Safari（最新版）</li>
+                                        <li>Edge（最新版）</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせ種別詳細 -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">お問い合わせ種別について</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">📋 一般的なお問い合わせ</h3>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li>サイトの使い方について</li>
+                                <li>競馬に関する基本的な質問</li>
+                                <li>アカウント登録について</li>
+                                <li>その他一般的なご質問</li>
+                            </ul>
+                            <p class="mt-1"><strong>返信目安:</strong> 1営業日以内</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">🎯 予想に関するお問い合わせ</h3>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li>予想方法について</li>
+                                <li>データの見方・解釈</li>
+                                <li>予想の根拠について</li>
+                                <li>的中率に関するご質問</li>
+                            </ul>
+                            <p class="mt-1"><strong>返信目安:</strong> 1-2営業日以内</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">⚙️ 技術的な問題</h3>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li>サイトが表示されない</li>
+                                <li>ログインできない</li>
+                                <li>エラーメッセージについて</li>
+                                <li>動作が重い・遅い</li>
+                            </ul>
+                            <p class="mt-1"><strong>返信目安:</strong> 6時間以内（緊急時）</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">💎 プレミアムサービス</h3>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li>有料サービスの詳細</li>
+                                <li>料金・決済について</li>
+                                <li>解約・返金について</li>
+                                <li>特典・サービス内容</li>
+                            </ul>
+                            <p class="mt-1"><strong>返信目安:</strong> 1営業日以内</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">💡 改善提案・要望</h3>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li>新機能のご提案</li>
+                                <li>サイト改善のご意見</li>
+                                <li>コンテンツの追加要望</li>
+                                <li>ユーザビリティについて</li>
+                            </ul>
+                            <p class="mt-1"><strong>返信目安:</strong> 2-3営業日以内</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">📧 その他</h3>
+                            <ul style="margin-left: 1rem; line-height: 1.8;">
+                                <li>上記に当てはまらないご質問</li>
+                                <li>取材・提携のご相談</li>
+                                <li>広告・宣伝について</li>
+                                <li>法的なお問い合わせ</li>
+                            </ul>
+                            <p class="mt-1"><strong>返信目安:</strong> 1-3営業日以内</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- プライバシー・セキュリティ -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">🔒 プライバシー・セキュリティについて</h2>
+                <div class="card">
+                    <div class="card-content">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                            <div>
+                                <h3 class="card-title">個人情報の取り扱い</h3>
+                                <ul style="margin-left: 1rem; line-height: 1.8;">
+                                    <li>SSL暗号化による安全な通信</li>
+                                    <li>個人情報は適切に管理・保護</li>
+                                    <li>第三者への情報提供は行いません</li>
+                                    <li>法的要請がある場合を除く</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="card-title">お問い合わせ情報の利用目的</h3>
+                                <ul style="margin-left: 1rem; line-height: 1.8;">
+                                    <li>お問い合わせへの回答</li>
+                                    <li>サービス改善のための分析</li>
+                                    <li>必要に応じた追加連絡</li>
+                                    <li>メルマガ配信（同意時のみ）</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-2" style="background-color: var(--light-gray); padding: 1rem; border-radius: 5px;">
+                            <p><strong>📋 プライバシーポリシー</strong></p>
+                            <p>詳細な個人情報の取り扱いについては、プライバシーポリシーをご確認ください。お問い合わせフォームの送信をもって、プライバシーポリシーに同意いただいたものとさせていただきます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 送信完了メッセージ（JavaScript制御） -->
+        <div id="success-message" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--white); padding: 2rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 1001; text-align: center;">
+            <h3 style="color: var(--accent-color); margin-bottom: 1rem;">✅ 送信完了</h3>
+            <p>お問い合わせありがとうございます。<br>内容を確認の上、営業日内にご返信いたします。</p>
+            <button onclick="closeSuccessMessage()" class="btn-primary" style="margin-top: 1rem;">閉じる</button>
+        </div>
+        
+        <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;"></div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>サイトマップ</h3>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="race-info.html">レース情報</a></li>
+                        <li><a href="prediction.html">予想・分析</a></li>
+                        <li><a href="results.html">結果・払戻</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="guide.html">初心者ガイド</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="#privacy">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>外部リンク</h3>
+                    <ul>
+                        <li><a href="https://www.jra.go.jp/" target="_blank">JRA公式サイト</a></li>
+                        <li><a href="#blog" target="_blank">公式ブログ</a></li>
+                        <li><a href="#twitter" target="_blank">Twitter</a></li>
+                        <li><a href="#facebook" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>お知らせ</h3>
+                    <p>競馬は20歳以上</p>
+                    <p>のギャンブルです。</p>
+                    <p>節度を持って</p>
+                    <p>楽しみましょう。</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 競馬情報サイト. All rights reserved.</p>
+                <p>本サイトは情報提供を目的とし、投資勧誘を意図したものではありません。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // フォーム送信処理
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 成功メッセージを表示
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('success-message').style.display = 'block';
+            
+            // フォームをリセット
+            this.reset();
+        });
+        
+        function closeSuccessMessage() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('success-message').style.display = 'none';
+        }
+        
+        // オーバーレイクリックで閉じる
+        document.getElementById('overlay').addEventListener('click', closeSuccessMessage);
+    </script>
+</body>
+</html>
